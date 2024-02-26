@@ -8,24 +8,31 @@
     <meta property="theme-color" content="#cfb340">
     <title>Waste Management Association Club</title>
     <meta name="viewport" content="width=device-width" />
-    <link href="css1.css" rel="stylesheet">
-    <link href="css2.css" rel="stylesheet">
+    <link href="/static/css1.css" rel="stylesheet">
+    <link href="/static/css2.css" rel="stylesheet">
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+    </style>
 </head>
 <body data-sveltekit-preload-data="hover">
 <div style="display: contents">
     <div class="flex min-h-screen flex-col">
         <div class="flex w-full flex-row justify-center">
             <nav class="text-semibold fixed top-4 z-30 flex flex-row gap-4 rounded-3xl bg-retro-white px-4 py-1 font-header text-lg opacity-90 shadow-md shadow-transparent transition ease-in hover:-translate-y-0.5 hover:shadow-retro-white md:gap-8 md:px-10 md:py-1.5 md:text-2xl">
-                <a href="/" class="text-amber-700 transition ease-in" data-svelte-h="svelte-swwv21">home</a>
-                <a href="/board" class="transition ease-in hover:text-pink-700" data-svelte-h="svelte-v72ijn">board</a>
-                <a href="/showcase" class="transition ease-in hover:text-blue-700" data-svelte-h="svelte-1dd05wd">showcase</a>
+                <a href="#home" class="text-amber-700 transition ease-in" data-svelte-h="svelte-swwv21">home</a>
+                <a href="#about" class="transition ease-in hover:text-pink-700" data-svelte-h="svelte-v72ijn">about us</a>
+                <a href="#meeting" class="transition ease-in hover:text-blue-700" data-svelte-h="svelte-1dd05wd">meeting</a>
+                <a href="#project" class="transition ease-in hover:text-green-700" data-svelte-h="svelte-1dd05wd">projects</a>
+                <a href="#board" class="transition ease-in hover:text-red-700" data-svelte-h="svelte-1dd05wd">board</a>
             </nav>
         </div>
         <div class="flex w-full flex-col bg-retro-gray text-lg text-retro-white md:items-center">
             <div class="flex min-h-[40rem] w-full flex-row justify-center rounded-b-3xl bg-retro-black pb-4">
                 <div class="flex flex-col items-center pt-52">
                     <span class="absolute z-10 w-0 translate-y-9 svelte-evt1w7"></span>
-                    <div class="z-20 h-auto w-40 stroke-retro-white" data-svelte-h="svelte-pytiw7">
+                    <div id="home" class="z-20 h-auto w-40 stroke-retro-white" data-svelte-h="svelte-pytiw7">
                         <img src="https://cdn-icons-png.freepik.com/256/535/535246.png">
                     </div>
                     <h1 class="mt-7 mb-3 font-header text-6xl font-semibold text-retro-white md:text-7xl" data-svelte-h="svelte-pw3l6w">Waste Management Association</h1>
@@ -56,20 +63,24 @@
                 </div>
             </div>
             <div class="my-12 flex w-fit flex-col gap-4 px-4 md:w-[46rem]">
-                <h2 class="font-header text-4xl" data-svelte-h="svelte-31c233">About Us</h2>
-                <p data-svelte-h="svelte-iwxjmf">Waste Management Association(WMA) is one of Rocklin High School's largest community service clubs! We are dedicated to keeping the school clean, and do some after school projects as well! You can join today, and make the world a better place!
+                <h2 id="about" class="font-header text-4xl" data-svelte-h="svelte-31c233">About Us</h2>
+                <p data-svelte-h="svelte-iwxjmf">
+                    Waste Management Association(WMA) is one of Rocklin High School's largest <strong>community service</strong> clubs!
+                    We are dedicated to keeping the school clean, and do some after school projects as well!
+                    You can join today, and make the world a better place!
                 </p>
 
-                <h2 class="mt-4 font-header text-4xl" data-svelte-h="svelte-1h23ff1">Meeting Times</h2>
+                <h2 id="meeting" class="mt-4 font-header text-4xl" data-svelte-h="svelte-1h23ff1">Meeting Times</h2>
                 <div class="mb-4 flex flex-col gap-1 text-xl" data-svelte-h="svelte-utgnp3">
                     <p class="text-red-300""><strong>Note:</strong> Meetings are not consistent and might change! Please join the discord for the latest reminders!</p>
                     <p class="mt-3"><em class="not-italic text-blue-300">Tuesday/Wednesday</em> during <em class="not-italic text-green-300">Lunch</em> at L3
                     </p>
                 </div>
-                <h2 class="font-header text-4xl" data-svelte-h="svelte-31c233">Our Future Projects</h2>
+                <h2 id="project" class="font-header text-4xl" data-svelte-h="svelte-31c233">Our Future Projects</h2>
                 <div class="my-4 rounded-lg bg-retro-white p-4 font-semibold text-retro-black shadow-md shadow-retro-white" data-svelte-h="svelte-wckzqp">
                     <div class="flex flex-row items-center gap-4">
-                        <h2 class="font-header text-4xl text-rose-400">Spring View</h2>
+                        <h2 class="font-header text-4xl text-rose-400">Spring View <i class="bi bi-building"></i>
+                        </h2>
                     </div>
                     <hr class="my-2 rounded border-2 border-rose-400">
                     <p>
@@ -78,7 +89,7 @@
                 </div>
                 <div class="my-4 rounded-lg bg-slate-100 p-4 font-semibold text-retro-black shadow-md shadow-slate-100">
                     <div class="flex flex-row items-center gap-4" data-svelte-h="svelte-1u5oix9">
-                        <h2 class="font-header text-4xl text-indigo-500">Miner's Ravine</h2>
+                        <h2 class="font-header text-4xl text-indigo-500">Miner's Ravine <i class="bi bi-compass"></i></h2>
                     </div>
                     <hr class="my-2 rounded border-2 border-indigo-500">
                     <p>
@@ -87,13 +98,13 @@
                 </div>
                 <div class="my-4 rounded-lg bg-[#bde5ef] p-4 font-semibold text-[#653d24] shadow-md shadow-[#bde5ef]">
                     <div class="flex flex-row items-center gap-4" data-svelte-h="svelte-19e6gz4">
-                        <h2 class="font-header text-4xl text-[#cd8c4a] transition ease-in">Trashy Dollar</h2>
+                        <h2 class="font-header text-4xl text-[#cd8c4a] transition ease-in">Trashy Dollar <i class="bi bi-currency-exchange"></i></h2>
                     </div>
                     <hr class="my-2 rounded border-2 border-[#cd8c4a]">
                     <p data-svelte-h="svelte-bhd9l3">One of our more ambitious projects - we will are looking into setting up trash cans and/or recycling bins in the dollar tree are to reduce waste!
                 </div>
                 <div class="mt-4 flex flex-col gap-3">
-                    <h2 class="font-header text-4xl" data-svelte-h="svelte-sbsewk">The Officer Team</h2>
+                    <h2 id="board" class="font-header text-4xl" data-svelte-h="svelte-sbsewk">The Officer Team</h2>
                     <p><b class="text-pink-300" data-svelte-h="svelte-1h4r0k1">Club Advisor:</b> Mrs. Kenitzer</p>
                     <p><b class="text-purple-300" data-svelte-h="svelte-6pf5of">President:</b> Sofia Guiterezz</p>
                     <p><b class="text-blue-300" data-svelte-h="svelte-15d7jta">Vice President:</b> Gargi Jerujikar</p>
